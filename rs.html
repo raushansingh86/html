@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Changer</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background-color: lightgray;
+            transition: 0.5s;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn1 { background-color: red; color: white; }
+        .btn2 { background-color: green; color: white; }
+        .btn3 { background-color: blue; color: white; }
+
+        #counter {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Background Color Changer 🎨</h1>
+
+    <button class="btn1" onclick="changeColor('red')">Red</button>
+    <button class="btn2" onclick="changeColor('green')">Green</button>
+    <button class="btn3" onclick="changeColor('blue')">Blue</button>
+
+    <p id="counter">Button Clicked: 0 times</p>
+
+    <script>
+        let count = 0;
+
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+            count++;
+            document.getElementById("counter").innerText = 
+                "Button Clicked: " + count + " times";
+        }
+    </script>
+
+</body>
+</html>
